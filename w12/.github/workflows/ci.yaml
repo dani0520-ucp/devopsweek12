@@ -1,0 +1,16 @@
+name: ci-wf
+on:
+  push:
+    branches:
+       - develop
+  pull_request:
+     branches:
+        - develop
+jobs:
+  linting-job:
+      runs-on: ubantu latest
+      steps:
+        - name: welcom message
+          run: echo"welcome to c1 pipeline"
+        - name: clone the repository
+          uses: actions/checkout@v4
